@@ -16,3 +16,8 @@ dependencies {
     compile project(':commun_javafx')
 
 }
+
+task(joueur01, dependsOn: 'classes', type: JavaExec) {
+   main = 'minesweeper.Principal'
+   classpath = sourceSets.main.runtimeClasspath
+}
