@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
-<VBox xmlns:fx="http://javafx.com/fxml">
-    <Text text="Minesweeper"/>
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal">
+    <VBox styleClass="vide-100"/>
+    <HBox styleClass="orange">
+        <HBox styleClass="vert"/>
+        <HBox styleClass="vide"/>
+        <HBox styleClass="vert"/>
+    </HBox>
+    <VBox styleClass="pink"></VBox>
 </VBox>

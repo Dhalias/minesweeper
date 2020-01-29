@@ -1,0 +1,41 @@
+.vide{
+    -fx-min-width:60px;
+    -fx-max-width:60px;
+    -fx-min-height:100px;
+    -fx-max-height:100px;
+}
+.vide-100{
+    -fx-min-width:400px;
+    -fx-max-width:400px;
+    -fx-min-height:100px;
+    -fx-max-height:100px;
+}
+
+.orange{
+    -fx-background-color:orange;
+    -fx-alignment : center;
+}
+
+.pink{
+    -fx-background-color:pink;
+    -fx-min-width:15px;
+    -fx-max-width:15px;
+    -fx-min-height:20px;
+    -fx-max-height:20px;
+}
+
+.vert{
+    -fx-background-color:green;
+    -fx-min-width:125px;
+    -fx-max-width:125px;
+    -fx-min-height:100px;
+    -fx-max-height:100px;
+}
+
+.principal{
+    -fx-min-width:400px;
+    -fx-max-width:400px;
+    -fx-min-height:400px;
+    -fx-max-height:400px;
+    -fx-background-color:gray;
+}
