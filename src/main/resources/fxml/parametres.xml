@@ -3,12 +3,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.RadioButton?>
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal">
     <VBox styleClass="vide-100"/>
     <HBox styleClass="orange">
-        <HBox styleClass="vert"/>
+        <HBox styleClass="vert">
+            <VBox>
+               <fx:define>
+                    <ToggleGroup fx:id="map-size" />
+                </fx:define>
+
+                <RadioButton fx:id="radioButton1-1" text="Petite" toggleGroup="$map-size"/>
+                <RadioButton fx:id="radioButton1-2" text="Moyenne" toggleGroup="$map-size"/>
+                <RadioButton fx:id="radioButton1-3" text="Grande" toggleGroup="$map-size"/>
+            </VBox>
+        </HBox>
         <HBox styleClass="vide"/>
-        <HBox styleClass="vert"/>
-    </HBox>
+        <HBox styleClass="vert">
+            <VBox>
+                <fx:define>
+                        <ToggleGroup fx:id="diff" />
+                    </fx:define>
+
+                    <RadioButton fx:id="radioButton2-1" text="Facile" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton2-2" text="Moyen" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton2-3" text="Difficile" toggleGroup="$diff"/>
+            </VBox>
+        </HBox>
     <VBox styleClass="pink"></VBox>
 </VBox>

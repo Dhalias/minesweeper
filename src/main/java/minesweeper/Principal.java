@@ -36,7 +36,7 @@ public class Principal extends Application{
 		
 		ChargeurDeVue chargeur = new ChargeurDeVue("/fxml/parametres.xml","traductions.chaines","/css/parametres.css");
 		
-		Scene scene = chargeur.nouvelleScene(600,400);
+		Scene scene = chargeur.nouvelleScene(400,400);
 		
 		DoitEtre.nonNul( scene );
 		
