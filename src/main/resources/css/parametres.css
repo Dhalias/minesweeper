@@ -7,8 +7,19 @@
 .vide-100{
     -fx-min-width:400px;
     -fx-max-width:400px;
-    -fx-min-height:100px;
-    -fx-max-height:100px;
+    -fx-min-height:50px;
+    -fx-max-height:50px;
+}
+
+.padding-radioButton{
+    -fx-min-width:125px;
+    -fx-max-width:125px;
+    -fx-min-height:15px;
+    -fx-max-height:15px;
+}
+
+.titreToggleGroup{
+    -fx-alignment:center;
 }
 
 .orange{
@@ -17,19 +28,47 @@
 }
 
 .pink{
-    -fx-background-color:pink;
-    -fx-min-width:15px;
-    -fx-max-width:15px;
-    -fx-min-height:20px;
-    -fx-max-height:20px;
+    -fx-background-color:blue;
+    -fx-min-width:400px;
+    -fx-max-width:400px;
+    -fx-min-height:50px;
+    -fx-max-height:50px;
+    -fx-alignement:center;
 }
 
 .vert{
     -fx-background-color:green;
     -fx-min-width:125px;
     -fx-max-width:125px;
-    -fx-min-height:100px;
-    -fx-max-height:100px;
+    -fx-min-height:150px;
+    -fx-max-height:150px;
+
+    -fx-border-style:solid;
+    -fx-border-width:2px;
+}
+
+.yellow{
+    -fx-background-color:yellow;
+    -fx-min-width:50px;
+    -fx-max-width:50px;
+    -fx-min-height:50px;
+    -fx-max-height:50px;
+}
+
+.boutonStart{
+    -fx-min-width:300px;
+    -fx-max-width:300px;
+    -fx-min-height:50px;
+    -fx-max-height:50px;
+    -fx-border-color:black;
+    -fx-border-style:solid;
+    -fx-text-color: black;
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-border-radius: 20px 20px 20px 20px;
+}
+
+.boutonStart:pressed{
+    -fx-background-color:orange;
 }
 
 .principal{
@@ -37,5 +76,5 @@
     -fx-max-width:400px;
     -fx-min-height:400px;
     -fx-max-height:400px;
-    -fx-background-color:gray;
+    -fx-background-color:rgb(216, 200, 200);
 }
