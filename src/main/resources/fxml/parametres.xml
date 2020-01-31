@@ -11,12 +11,12 @@
         <HBox styleClass="vert">
             <VBox>
                <fx:define>
-                    <ToggleGroup fx:id="map-size" />
+                    <ToggleGroup fx:id="mapSize" />
                 </fx:define>
 
-                <RadioButton fx:id="radioButton1-1" text="Petite" toggleGroup="$map-size"/>
-                <RadioButton fx:id="radioButton1-2" text="Moyenne" toggleGroup="$map-size"/>
-                <RadioButton fx:id="radioButton1-3" text="Grande" toggleGroup="$map-size"/>
+                <RadioButton fx:id="radioButton11" text="Petite" toggleGroup="$mapSize"/>
+                <RadioButton fx:id="radioButton12" text="Moyenne" toggleGroup="$mapSize"/>
+                <RadioButton fx:id="radioButton13" text="Grande" toggleGroup="$mapSize"/>
             </VBox>
         </HBox>
         <HBox styleClass="vide"/>
@@ -26,10 +26,11 @@
                         <ToggleGroup fx:id="diff" />
                     </fx:define>
 
-                    <RadioButton fx:id="radioButton2-1" text="Facile" toggleGroup="$diff"/>
-                    <RadioButton fx:id="radioButton2-2" text="Moyen" toggleGroup="$diff"/>
-                    <RadioButton fx:id="radioButton2-3" text="Difficile" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton21" text="Facile" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton22" text="Moyen" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton23" text="Difficile" toggleGroup="$diff"/>
             </VBox>
         </HBox>
+    </HBox>
     <VBox styleClass="pink"></VBox>
 </VBox>
