@@ -17,14 +17,14 @@
                 </fx:define>
 
                 <VBox styleClass="padding-radioButton">
-                    <Text styleClass="titreToggleGroup" text="Carte"></Text>
+                    <Text styleClass="titreToggleGroup" text="%titleMapSize"></Text>
                 </VBox>
                 <VBox styleClass="padding-radioButton"/>
-                <RadioButton fx:id="radioButton11" text="Petite" toggleGroup="$mapSize"/>
+                <RadioButton fx:id="radioButton11" text="%size1" toggleGroup="$mapSize"/>
                 <VBox styleClass="padding-radioButton"/>
-                <RadioButton fx:id="radioButton12" text="Moyenne" toggleGroup="$mapSize"/>
+                <RadioButton fx:id="radioButton12" text="%size2" toggleGroup="$mapSize"/>
                  <VBox styleClass="padding-radioButton"/>
-                <RadioButton fx:id="radioButton13" text="Grande" toggleGroup="$mapSize"/>
+                <RadioButton fx:id="radioButton13" text="%size3" toggleGroup="$mapSize"/>
                  <VBox styleClass="padding-radioButton"/>
             </VBox>
         </HBox>
@@ -36,14 +36,14 @@
                     </fx:define>
 
                     <VBox styleClass="padding-radioButton">
-                        <Text text="Difficulté"></Text>
+                        <Text text="%titleDiff"></Text>
                     </VBox>
                     <VBox styleClass="padding-radioButton"/>
-                    <RadioButton fx:id="radioButton21" text="Facile" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton21" text="%diff1" toggleGroup="$diff"/>
                     <VBox styleClass="padding-radioButton"/>
-                    <RadioButton fx:id="radioButton22" text="Moyen" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton22" text="%diff2" toggleGroup="$diff"/>
                     <VBox styleClass="padding-radioButton"/>
-                    <RadioButton fx:id="radioButton23" text="Difficile" toggleGroup="$diff"/>
+                    <RadioButton fx:id="radioButton23" text="%diff3" toggleGroup="$diff"/>
                     <VBox styleClass="padding-radioButton"/>
             </VBox>
         </HBox>
@@ -52,7 +52,7 @@
     <VBox styleClass="pink">
         <HBox>
             <HBox styleClass="yellow"/>
-            <Button styleClass="boutonStart" text="Débuter la partie"/>
+            <Button styleClass="boutonStart" text="%boutonStart"/>
             <HBox styleClass="yellow"/>
         </HBox>
         
