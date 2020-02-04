@@ -5,11 +5,9 @@
     -fx-background-color:red;
 }
 
-.padding-radioButton{
-}
-
 .titreToggleGroup{
     -fx-alignment:center;
+    -fx-font-size: 1.15em;
 }
 
 .orange{
