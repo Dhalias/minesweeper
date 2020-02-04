@@ -1,21 +1,17 @@
 .vide{
     -fx-min-width:60px;
-    -fx-max-width:60px;
     -fx-min-height:100px;
-    -fx-max-height:100px;
+    -fx-background-color:purple;
 }
 .vide-100{
     -fx-min-width:400px;
-    -fx-max-width:400px;
     -fx-min-height:50px;
-    -fx-max-height:50px;
+    -fx-background-color:red;
 }
 
 .padding-radioButton{
     -fx-min-width:125px;
-    -fx-max-width:125px;
     -fx-min-height:15px;
-    -fx-max-height:15px;
 }
 
 .titreToggleGroup{
@@ -30,18 +26,14 @@
 .pink{
     -fx-background-color:blue;
     -fx-min-width:400px;
-    -fx-max-width:400px;
     -fx-min-height:50px;
-    -fx-max-height:50px;
     -fx-alignement:center;
 }
 
 .vert{
     -fx-background-color:green;
     -fx-min-width:125px;
-    -fx-max-width:125px;
     -fx-min-height:150px;
-    -fx-max-height:150px;
 
     -fx-border-style:solid;
     -fx-border-width:2px;
@@ -50,16 +42,12 @@
 .yellow{
     -fx-background-color:yellow;
     -fx-min-width:50px;
-    -fx-max-width:50px;
     -fx-min-height:50px;
-    -fx-max-height:50px;
 }
 
 .boutonStart{
     -fx-min-width:300px;
-    -fx-max-width:300px;
     -fx-min-height:50px;
-    -fx-max-height:50px;
     -fx-border-color:black;
     -fx-border-style:solid;
     -fx-text-color: black;
@@ -73,8 +61,14 @@
 
 .principal{
     -fx-min-width:400px;
-    -fx-max-width:400px;
     -fx-min-height:400px;
-    -fx-max-height:400px;
     -fx-background-color:rgb(216, 200, 200);
+}
+
+.gold{
+    -fx-background-color:gold;
+}
+
+.purple{
+    -fx-background-color:purple;
 }
