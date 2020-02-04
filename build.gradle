@@ -20,4 +20,11 @@ dependencies {
 task(joueur01, dependsOn: 'classes', type: JavaExec) {
    main = 'minesweeper.Principal'
    classpath = sourceSets.main.runtimeClasspath
+   jvmArgs('-Duser.language=fr')
+}
+
+task(joueur01En, dependsOn: 'classes', type: JavaExec) {
+   main = 'minesweeper.Principal'
+   classpath = sourceSets.main.runtimeClasspath
+   jvmArgs('-Duser.language=en')
 }
