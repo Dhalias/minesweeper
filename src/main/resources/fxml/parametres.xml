@@ -9,51 +9,53 @@
 <?import javafx.scene.text.Text?>
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal">
     <VBox styleClass="vide-100"/>
-    <HBox styleClass="orange">
-        <HBox styleClass="vert">
-            <VBox>
+    <HBox styleClass="orange"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <HBox styleClass="vert" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+            <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS">
                <fx:define>
                     <ToggleGroup fx:id="mapSize" />
                 </fx:define>
 
-                <VBox styleClass="padding-radioButton">
+                <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS">
                     <Text styleClass="titreToggleGroup" text="%titleMapSize"></Text>
                 </VBox>
-                <VBox styleClass="padding-radioButton"/>
-                <RadioButton fx:id="radioButton11" text="%size1" toggleGroup="$mapSize"/>
-                <VBox styleClass="padding-radioButton"/>
-                <RadioButton fx:id="radioButton12" text="%size2" toggleGroup="$mapSize"/>
-                 <VBox styleClass="padding-radioButton"/>
-                <RadioButton fx:id="radioButton13" text="%size3" toggleGroup="$mapSize"/>
-                 <VBox styleClass="padding-radioButton"/>
+                <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                <RadioButton fx:id="radioButton11" text="%size1" toggleGroup="$mapSize" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                <RadioButton fx:id="radioButton12" text="%size2" toggleGroup="$mapSize" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                 <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                <RadioButton fx:id="radioButton13" text="%size3" toggleGroup="$mapSize" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                 <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
             </VBox>
         </HBox>
-        <HBox styleClass="vide"/>
-        <HBox styleClass="vert">
-            <VBox>
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <HBox styleClass="vert" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+            <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS">
                 <fx:define>
                         <ToggleGroup fx:id="diff" />
                     </fx:define>
 
-                    <VBox styleClass="padding-radioButton">
-                        <Text text="%titleDiff"></Text>
+                    <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS">
+                        <Text styleClass="titreToggleGroup" text="%titleDiff"></Text>
                     </VBox>
-                    <VBox styleClass="padding-radioButton"/>
-                    <RadioButton fx:id="radioButton21" text="%diff1" toggleGroup="$diff"/>
-                    <VBox styleClass="padding-radioButton"/>
-                    <RadioButton fx:id="radioButton22" text="%diff2" toggleGroup="$diff"/>
-                    <VBox styleClass="padding-radioButton"/>
-                    <RadioButton fx:id="radioButton23" text="%diff3" toggleGroup="$diff"/>
-                    <VBox styleClass="padding-radioButton"/>
+                    <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                    <RadioButton fx:id="radioButton21" text="%diff1" toggleGroup="$diff" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                    <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                    <RadioButton fx:id="radioButton22" text="%diff2" toggleGroup="$diff" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                    <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                    <RadioButton fx:id="radioButton23" text="%diff3" toggleGroup="$diff" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+                    <VBox styleClass="padding-radioButton" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
             </VBox>
         </HBox>
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
     </HBox>
-    <VBox styleClass="vide-100"/>
-    <VBox styleClass="pink">
+    <VBox styleClass="vide-100" maxHeight="Infinity" VBox.vgrow="ALWAYS" />
+    <VBox styleClass="pink" maxHeight="Infinity" VBox.vgrow="ALWAYS" >
         <HBox>
-            <HBox styleClass="yellow"/>
-            <Button styleClass="boutonStart" text="%boutonStart"/>
-            <HBox styleClass="yellow"/>
+            <HBox styleClass="yellow"  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button styleClass="boutonStart" text="%boutonStart"  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <HBox styleClass="yellow"  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         </HBox>
         
     </VBox>
