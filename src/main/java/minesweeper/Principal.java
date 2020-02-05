@@ -5,9 +5,7 @@ import commun.debogage.J;
 import commun_javafx.ChargeurDeVue;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class Principal extends Application{
@@ -37,8 +35,7 @@ public class Principal extends Application{
 		J.appel( this );
 		
 		ChargeurDeVue chargeur = new ChargeurDeVue("/fxml/parametres.xml","traductions.chaines","/css/parametres.css");
-		Rectangle2D tailleEcran = Screen.getPrimary().getVisualBounds();
-		Scene scene = chargeur.nouvelleScene((int)(tailleEcran.getWidth()/4.8),(int)(tailleEcran.getHeight()/2.7));
+		Scene scene = chargeur.nouvelleScene((float)20.83,(float)37.03,(float)1.11);
 		
 		DoitEtre.nonNul( scene );
 		

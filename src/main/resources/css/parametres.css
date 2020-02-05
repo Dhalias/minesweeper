@@ -32,6 +32,7 @@
 }
 
 .boutonStart{
+    -fx-font-size:1.25em;
     -fx-border-color:black;
     -fx-border-style:solid;
     -fx-text-color: black;
@@ -44,10 +45,6 @@
 }
 
 .principal{
-    -fx-min-width:33.33em;
-    -fx-min-height:33.33em;
-    -fx-max-width:60em;
-    -fx-max-height:60em;
     -fx-background-color:rgb(216, 200, 200);
     -fx-font-size:1em;
 }
