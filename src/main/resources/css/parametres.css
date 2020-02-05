@@ -1,34 +1,18 @@
-.vide{
-    -fx-background-color:purple;
-}
-.vide-100{
-    -fx-background-color:red;
-}
 
 .titreToggleGroup{
     -fx-alignment:center;
     -fx-font-size: 1.15em;
 }
 
-.orange{
-    -fx-background-color:orange;
+.center{
     -fx-alignment : center;
 }
 
-.pink{
-    -fx-background-color:blue;
-    -fx-alignement:center;
-}
-
-.vert{
-    -fx-background-color:green;
+.paramBox{
+    -fx-background-color:gray;
 
     -fx-border-style:solid;
     -fx-border-width:0.167em;
-}
-
-.yellow{
-    -fx-background-color:yellow;
 }
 
 .boutonStart{
@@ -45,6 +29,6 @@
 }
 
 .principal{
-    -fx-background-color:rgb(216, 200, 200);
+    -fx-background-color:silver;
     -fx-font-size:1em;
 }
