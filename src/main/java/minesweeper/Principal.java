@@ -35,7 +35,7 @@ public class Principal extends Application{
 		J.appel( this );
 		
 		ChargeurDeVue chargeur = new ChargeurDeVue("/fxml/parametres.xml","traductions.chaines","/css/parametres.css");
-		Scene scene = chargeur.nouvelleScene((float)20.83,(float)37.03,(float)1.11);
+		Scene scene = chargeur.nouvelleScene((float)25,(float)37.03,(float)1.50);
 		
 		DoitEtre.nonNul( scene );
 		
