@@ -13,7 +13,7 @@
     <HBox styleClass="center"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
-            <GC_Radiobutton rb1="%size1" rb2="%size2" rb3="%size3" title="%titleMapSize">
+            <GC_Radiobutton rb1="%size1" rb2="%size2" rb3="%size3" title="%titleMapSize"/>
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
