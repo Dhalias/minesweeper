@@ -17,22 +17,7 @@
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
-            <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS">
-                <fx:define>
-                        <ToggleGroup fx:id="diff" />
-                    </fx:define>
-
-                    <VBox  maxHeight="Infinity" VBox.vgrow="ALWAYS">
-                        <Text styleClass="titreToggleGroup" text="%titleDiff"></Text>
-                    </VBox>
-                    <VBox  maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-                    <RadioButton fx:id="radioButton21" text="%diff1" toggleGroup="$diff" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-                    <VBox  maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-                    <RadioButton fx:id="radioButton22" text="%diff2" toggleGroup="$diff" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-                    <VBox  maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-                    <RadioButton fx:id="radioButton23" text="%diff3" toggleGroup="$diff" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-                    <VBox  maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
-            </VBox>
+            <GC_Radiobutton rb1="%diff1" rb2="%diff2" rb3="%diff3" title="%titleDiff"/>
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
     </HBox>
