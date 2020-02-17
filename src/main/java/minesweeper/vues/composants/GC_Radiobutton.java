@@ -7,8 +7,12 @@ import javafx.scene.layout.VBox;
 import javafx.scene.layout.Priority;
 
 import javafx.util.Duration;
+
+import javafx.event.*;
+
 import commun.debogage.J;
 import javafx.beans.NamedArg;
+import javafx.event.EventHandler;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
@@ -34,12 +38,38 @@ public class GC_Radiobutton extends VBox {
 		this.getChildren().add( AjouterVBoxVide() );
 
 		creerAnimation();
+		animationSurvol.setCycleCount( -1 );
+
+		installerListeners();
+
+	}
+
+	private void installerListeners() {
+		J.appel( this );
+
+		this.setOnMouseEntered( new EventHandler<Event>() {
+			@Override
+			public void handle( Event event ) {
+				J.appel( this );
+				animationSurvol.playFromStart();
+			}
+		} );
+		
+		this.setOnMouseExited( new EventHandler<Event>() {
+			@Override
+			public void handle(Event event) {
+				J.appel( this );
+				animationSurvol.stop();
+				GC_Radiobutton.this.setOpacity( 1 );
+			}
+		} );
+
 	}
 
 	private void creerAnimation() {
 		J.appel( this );
 
-		double delaiMilisecondes = 600;
+		double delaiMilisecondes = 450;
 		double opaciteNormale = 1.0;
 		double opaciteBasse = 0.6;
 
