@@ -4,15 +4,19 @@
 package minesweeper.vues.composants;
 
 import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+
+import java.time.Duration;
 import commun.debogage.J;
 import javafx.beans.NamedArg;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
+import javafx.animation.*;
 
 public class GC_Radiobutton extends VBox {
+
+	private Timeline animationSurvol = new Timeline();
 
 	public GC_Radiobutton( @NamedArg("rb1") String rb1_Name, @NamedArg("rb2") String rb2_Name,
 			@NamedArg("rb3") String rb3_Name, @NamedArg("title") String title ) {
@@ -29,6 +33,24 @@ public class GC_Radiobutton extends VBox {
 		this.getChildren().add( AjouterBouton( rb3_Name, tg ) );
 		this.getChildren().add( AjouterVBoxVide() );
 
+		creerAnimation();
+	}
+
+	private void creerAnimation() {
+		J.appel( this );
+
+		double delaiMilisecondes = 600;
+		double opaciteNormale = 1.0;
+		double opaciteBasse = 0.6;
+
+		animationSurvol.getKeyFrames()
+				.add( new KeyFrame( Duration.ZERO, new KeyValue( opacityProperty(), opaciteNormale ) ) );
+
+		animationSurvol.getKeyFrames().add(
+				new KeyFrame( new Duration( delaiMilisecondes ), new KeyValue( opacityProperty(), opaciteBasse ) ) );
+
+		animationSurvol.getKeyFrames().add( new KeyFrame( new Duration( delaiMilisecondes * 2 ),
+				new KeyValue( opacityProperty(), opaciteNormale ) ) );
 	}
 
 	private RadioButton AjouterBouton( String texte, ToggleGroup tg ) {
