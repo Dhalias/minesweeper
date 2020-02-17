@@ -6,7 +6,7 @@ package minesweeper.vues.composants;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.Priority;
 
-import java.time.Duration;
+import javafx.util.Duration;
 import commun.debogage.J;
 import javafx.beans.NamedArg;
 import javafx.scene.control.RadioButton;
