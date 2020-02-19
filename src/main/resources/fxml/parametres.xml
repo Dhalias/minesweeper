@@ -8,16 +8,16 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.text.Text?>
 <?import minesweeper.vues.composants.GC_Radiobutton?>
-<VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal">
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal" fx:controller="minesweeper_javafx.vues.VueParametresFX">
     <VBox  maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
     <HBox styleClass="center"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
-            <GC_Radiobutton rb1="%size1" rb2="%size2" rb3="%size3" title="%titleMapSize"/>
+            <GC_Radiobutton fx:id="gcRadiobutton" rb1="%size1" rb2="%size2" rb3="%size3" title="%titleMapSize"/>
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
-            <GC_Radiobutton rb1="%diff1" rb2="%diff2" rb3="%diff3" title="%titleDiff"/>
+            <GC_Radiobutton fx:id="gcRadiobutton" rb1="%diff1" rb2="%diff2" rb3="%diff3" title="%titleDiff"/>
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
     </HBox>
