@@ -11,6 +11,9 @@ public class AfficheurParametresFX extends AfficheurParametres<VueParametresFX>{
 	public void initialiserAffichage( ParametresLectureSeule modeleLectureSeule, VueParametresFX vue ) {
 		J.appel( this );
 		
+		
+		vue.changerCouleurArrierrePlan(modeleLectureSeule.getCouleur());
+		
 	}
 
 }

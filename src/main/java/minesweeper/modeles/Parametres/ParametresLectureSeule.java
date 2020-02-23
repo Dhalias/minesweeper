@@ -1,7 +1,10 @@
 package minesweeper.modeles.Parametres;
 
+import javafx.scene.paint.Color;
+
 import commun.modeles.ModeleLectureSeule;
 
 public interface ParametresLectureSeule extends ModeleLectureSeule{
-	int getHauteurGrille();
+	int getNumCouleur();
+	String getCouleur();
 }

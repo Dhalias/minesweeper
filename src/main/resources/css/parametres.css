@@ -32,3 +32,19 @@
     -fx-background-color:silver;
     -fx-font-size:1em;
 }
+
+.coral{
+    -fx-background-color:coral;
+}
+
+.green{
+    -fx-background-color:green;
+}
+
+.darkRed{
+    -fx-background-color:rgb(172, 66, 83);
+}
+
+.blue{
+    -fx-background-color:rgb(93, 93, 218);
+}
