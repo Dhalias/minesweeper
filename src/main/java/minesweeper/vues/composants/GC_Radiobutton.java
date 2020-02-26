@@ -131,11 +131,12 @@ public class GC_Radiobutton extends VBox {
 	}
 	
 	public ArrayList<RadioButton> getRbList(){
+		J.appel( this );
 		return this.rbList;
 	}
 	
 	private RadioButton getSelectedRb() {
-		
+		J.appel( this );
 		RadioButton rb = null;
 		
 		for ( RadioButton radioButton : this.getRbList() ) {
@@ -149,7 +150,7 @@ public class GC_Radiobutton extends VBox {
 	}
 	
 	public int getSelectedValue() {
-		
+		J.appel( this );
 		RadioButton rb = this.getSelectedRb();
 		String rbId = rb.getId();
 		int value = Integer.parseInt( String.valueOf(rbId.charAt( rbId.length() - 1 )));

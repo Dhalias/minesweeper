@@ -14,14 +14,17 @@ public class AfficheurParametresFX extends AfficheurParametres<VueParametresFX>{
 		
 		vue.changerCouleurArrierrePlan();
 		
-		int difficulte = modeleLectureSeule.getDifficulte();
 		
 		
 	}
 
 	@Override
 	public void rafraichirAffichage( ParametresLectureSeule modeleLectureSeule, VueParametresFX vue ) {
-		// TODO Auto-generated method stub
+		J.appel( this );
+		
+		System.out.println( "\n [INFORMATIONS]\tLa taille de la carte est de "+modeleLectureSeule.getTaille()+"\n");
+		System.out.println( "\n [INFORMATIONS]\tLa difficulte  est de "+modeleLectureSeule.getDifficulte()+"\n");
+		
 		
 	}
 

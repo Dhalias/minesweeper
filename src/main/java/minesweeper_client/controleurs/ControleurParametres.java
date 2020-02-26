@@ -19,7 +19,13 @@ public abstract class ControleurParametres<V extends VueParametres, A extends Af
 			@Override
 			public void executerCommandeMVC(FaireDebutPartieRecue commande) {
 				J.appel( this );
-			}
+				
+				int difficulte = commande.getDifficulte();
+				int taille = commande.getTaille();
+				modele.setTaille( taille );
+				modele.setDifficulte( difficulte );
+				
+			} 
 		});
 	}
 }

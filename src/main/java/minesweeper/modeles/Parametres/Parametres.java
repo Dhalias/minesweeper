@@ -22,5 +22,15 @@ public class Parametres extends Modele<ParametresLectureSeule> implements Parame
 		return difficulte;
 	}
 	
+	public void setTaille(int taille) {
+		J.appel( this );
+		this.taille = taille;
+	}
+	
+	public void setDifficulte(int difficulte) {
+		J.appel( this );
+		this.difficulte = difficulte;
+	}
+	
 
 }

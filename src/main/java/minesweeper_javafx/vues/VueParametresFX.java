@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
+import commun_client.commandes.FabriqueCommande;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.*;
@@ -33,6 +34,8 @@ public class VueParametresFX implements VueParametres, Initializable {
 
 	@FXML
 	private Button boutonDebuter;
+	
+	private FaireDebutPartiePourEnvoi faireDebutPartiePourEnvoi;
 
 	@Override
 	public void initialize( URL arg0, ResourceBundle arg1 ) {
@@ -77,7 +80,7 @@ public class VueParametresFX implements VueParametres, Initializable {
 	}
 
 	public void obtenirFaireDebutPartiePourEnvoi() {
-
+		J.appel( this );
 	}
 	
 
@@ -89,10 +92,10 @@ public class VueParametresFX implements VueParametres, Initializable {
 			@Override
 			public void handle( ActionEvent event ) {
 				J.appel( this );
-
-				System.out.println( gcRadiobuttonDiff.getSelectedValue() );
-				
-				System.out.println( gcRadiobuttonSize.getSelectedValue() );
+				faireDebutPartiePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( FaireDebutPartie.class );
+				faireDebutPartiePourEnvoi.setDifficulte( gcRadiobuttonDiff.getSelectedValue() );
+				faireDebutPartiePourEnvoi.setTaille( gcRadiobuttonSize.getSelectedValue() );
+				faireDebutPartiePourEnvoi.envoyerCommande();
 			}
 
 		} );
