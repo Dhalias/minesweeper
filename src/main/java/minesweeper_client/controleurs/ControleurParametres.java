@@ -13,7 +13,7 @@ import minesweeper_client.vues.VueParametres;
 public abstract class ControleurParametres<V extends VueParametres, A extends AfficheurParametres<V>>
 		extends ControleurModeleVue<ParametresLectureSeule, Parametres, V, A> {
 	@Override
-	protected void installerReceptionCommandes() {
+	public void installerReceptionCommandes() {
 		J.appel( this );
 		installerRecepteurCommande(FaireDebutPartie.class, new RecepteurCommandeMVC<FaireDebutPartieRecue>() {
 			@Override

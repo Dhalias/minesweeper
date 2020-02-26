@@ -12,7 +12,13 @@ public class AfficheurParametresFX extends AfficheurParametres<VueParametresFX>{
 		J.appel( this );
 		
 		
-		vue.changerCouleurArrierrePlan(modeleLectureSeule.getCouleur());
+		vue.changerCouleurArrierrePlan();
+		
+	}
+
+	@Override
+	public void rafraichirAffichage( ParametresLectureSeule modeleLectureSeule, VueParametresFX vue ) {
+		// TODO Auto-generated method stub
 		
 	}
 
