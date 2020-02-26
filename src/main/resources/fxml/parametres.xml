@@ -13,11 +13,11 @@
     <HBox styleClass="center"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
-            <GC_Radiobutton fx:id="gcRadiobutton" rb1="%size1" rb2="%size2" rb3="%size3" title="%titleMapSize"/>
+            <GC_Radiobutton fx:id="gcRadiobuttonSize" rb1="%size1" rb2="%size2" rb3="%size3" id="size" title="%titleMapSize"/>
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         <HBox styleClass="paramBox" maxWidth="Infinity" HBox.hgrow="ALWAYS">
-            <GC_Radiobutton fx:id="gcRadiobutton" rb1="%diff1" rb2="%diff2" rb3="%diff3" title="%titleDiff"/>
+            <GC_Radiobutton fx:id="gcRadiobuttonDiff" rb1="%diff1" rb2="%diff2" rb3="%diff3" id="diff" title="%titleDiff"/>
         </HBox>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
     </HBox>

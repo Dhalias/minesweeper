@@ -14,6 +14,9 @@ public class AfficheurParametresFX extends AfficheurParametres<VueParametresFX>{
 		
 		vue.changerCouleurArrierrePlan();
 		
+		int difficulte = modeleLectureSeule.getDifficulte();
+		
+		
 	}
 
 	@Override

@@ -10,6 +10,10 @@ import javafx.util.Duration;
 
 import javafx.event.*;
 
+import java.util.ArrayList;
+
+import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
+
 import commun.debogage.J;
 import javafx.beans.NamedArg;
 import javafx.event.EventHandler;
@@ -21,20 +25,22 @@ import javafx.animation.*;
 public class GC_Radiobutton extends VBox {
 
 	private Timeline animationSurvol = new Timeline();
+	private ToggleGroup tg = new ToggleGroup();
+	private ArrayList<RadioButton> rbList = new ArrayList<>();
 
 	public GC_Radiobutton( @NamedArg("rb1") String rb1_Name, @NamedArg("rb2") String rb2_Name,
-			@NamedArg("rb3") String rb3_Name, @NamedArg("title") String title ) {
+			@NamedArg("rb3") String rb3_Name, @NamedArg("title") String title, @NamedArg("id") String idGeneral ) {
 
 		super();
 		J.appel( this );
-		ToggleGroup tg = new ToggleGroup();
+		
 
 		this.getChildren().add( AjouterVBoxTitre( title ) );
-		this.getChildren().add( AjouterBouton( rb1_Name, tg ) );
+		this.getChildren().add( AjouterBouton( rb1_Name, tg, (idGeneral+"1") ));
 		this.getChildren().add( AjouterVBoxVide() );
-		this.getChildren().add( AjouterBouton( rb2_Name, tg ) );
+		this.getChildren().add( AjouterBouton( rb2_Name, tg, (idGeneral+"2") ) );
 		this.getChildren().add( AjouterVBoxVide() );
-		this.getChildren().add( AjouterBouton( rb3_Name, tg ) );
+		this.getChildren().add( AjouterBouton( rb3_Name, tg, (idGeneral+"3") ) );
 		this.getChildren().add( AjouterVBoxVide() );
 
 		creerAnimation();
@@ -83,13 +89,15 @@ public class GC_Radiobutton extends VBox {
 				new KeyValue( opacityProperty(), opaciteNormale ) ) );
 	}
 
-	private RadioButton AjouterBouton( String texte, ToggleGroup tg ) {
+	private RadioButton AjouterBouton( String texte, ToggleGroup tg, String id ) {
 		J.appel( this );
 
 		RadioButton rb = new RadioButton( texte );
 		rb.setToggleGroup( tg );
 		rb.setMaxHeight( Double.MAX_VALUE );
 		VBox.setVgrow( rb, Priority.ALWAYS );
+		rb.setId( id );
+		rbList.add( rb );
 
 		return rb;
 	}
@@ -121,5 +129,46 @@ public class GC_Radiobutton extends VBox {
 		return vb;
 
 	}
+	
+	public ArrayList<RadioButton> getRbList(){
+		return this.rbList;
+	}
+	
+	private RadioButton getSelectedRb() {
+		
+		RadioButton rb = null;
+		
+		for ( RadioButton radioButton : this.getRbList() ) {
+			if ( radioButton.isSelected() ) {
+				rb = radioButton;
+				break;
+			}
+		}
+		
+		return rb;
+	}
+	
+	public int getSelectedValue() {
+		
+		RadioButton rb = this.getSelectedRb();
+		String rbId = rb.getId();
+		int value = Integer.parseInt( String.valueOf(rbId.charAt( rbId.length() - 1 )));
+
+		
+		switch ( value ) {
+		case 1:
+			value = 1;
+			break;
+		case 2:
+			value = 2;
+			break;
+		case 3:
+			value = 3;
+			break;
+		}
+		
+		return value;
+	}
+	
 
 }
