@@ -4,7 +4,7 @@ import minesweeper_client.commandes.FaireDebutPartie;
 import minesweeper_client.commandes.FaireDebutPartiePourEnvoi;
 import minesweeper_client.vues.VueParametres;
 
-import java.awt.Button;
+import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
