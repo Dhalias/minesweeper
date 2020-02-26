@@ -25,7 +25,7 @@
     <VBox styleClass="center" maxHeight="Infinity" VBox.vgrow="ALWAYS" >
         <HBox>
             <HBox   maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
-            <Button styleClass="boutonStart" text="%boutonStart"  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="boutonDebuter" styleClass="boutonStart" text="%boutonStart"  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
             <HBox   maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
         </HBox>
         
