@@ -6,6 +6,7 @@ import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import commun_client.mvc.controleurs.FabriqueControleur;
 import commun_javafx.ChargeurDeVue;
+import commun_javafx.DialogueModal;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -13,7 +14,9 @@ import javafx.stage.Stage;
 import minesweeper.modeles.Parametres.Parametres;
 import minesweeper_javafx.afficheurs.AfficheurParametresFX;
 import minesweeper_javafx.controleurs.ControleurParametresFX;
+import minesweeper_javafx.controleurs.ControleurPrincipalFX;
 import minesweeper_javafx.vues.VueParametresFX;
+import minesweeper_javafx.vues.VuePrincipaleFX;
 
 public class Principal extends Application{
 	static {
@@ -31,11 +34,28 @@ public class Principal extends Application{
 	public void start(Stage fenetrePrincipale) throws Exception {
 		J.appel( this );
 		
+		DialogueModal.enregistreFenetrePrincipale(fenetrePrincipale);
+	    
+	    ChargeurDeVue<VuePrincipaleFX> chargeur;
+	    chargeur = new ChargeurDeVue<VuePrincipaleFX>("/fxml/principal.xml",
+	                                                  "traductions.chaines",
+	                                                  "/css/principal.css");
+
+	    VuePrincipaleFX vue = chargeur.getVue();
+	    
+	    DoitEtre.nonNul(vue);
+
+	    FabriqueControleur.creerControleur(ControleurPrincipalFX.class, 
+	                                       vue);
+		
+		
 		Scene scene = creerScenePrincipale();
 		
 		fenetrePrincipale.setScene( scene );
 		
 		fenetrePrincipale.show();
+		
+		
 	}
 	
 	private Scene creerScenePrincipale() {

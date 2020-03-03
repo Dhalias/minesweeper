@@ -96,6 +96,7 @@ public class VueParametresFX implements VueParametres, Initializable {
 				faireDebutPartiePourEnvoi.setDifficulte( gcRadiobuttonDiff.getSelectedValue() );
 				faireDebutPartiePourEnvoi.setTaille( gcRadiobuttonSize.getSelectedValue() );
 				faireDebutPartiePourEnvoi.envoyerCommande();
+			
 			}
 
 		} );
