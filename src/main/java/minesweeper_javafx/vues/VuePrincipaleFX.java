@@ -1,6 +1,7 @@
 package minesweeper_javafx.vues;
 
 
+import minesweeper_client.commandes.OuvrirParametres;
 import minesweeper_client.commandes.OuvrirParametresPourEnvoi;
 import minesweeper_client.commandes.QuitterPourEnvoi;
 import minesweeper_client.vues.VuePrincipale;
@@ -10,6 +11,7 @@ import java.util.ResourceBundle;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
+import commun_client.commandes.FabriqueCommande;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.*;
@@ -29,6 +31,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	@Override
 	public void obtenirCommandesPourEnvoi() {
 		J.appel( this );
+		ouvrirParametresPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( OuvrirParametres.class );
 		
 	}
 
