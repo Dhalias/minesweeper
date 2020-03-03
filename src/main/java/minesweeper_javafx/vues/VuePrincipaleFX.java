@@ -28,7 +28,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 
 	@Override
 	public void obtenirCommandesPourEnvoi() {
-		// TODO Auto-generated method stub
+		J.appel( this );
 		
 	}
 
@@ -62,6 +62,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 
 	@Override
 	public void initialize( URL arg0, ResourceBundle arg1 ) {
+		J.appel( this );
 		DoitEtre.nonNul( boutonStart );
 		DoitEtre.nonNul( quitter );
 	}

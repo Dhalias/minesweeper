@@ -1,7 +1,5 @@
 package minesweeper;
 
-import javax.naming.PartialResultException;
-
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import commun_client.mvc.controleurs.FabriqueControleur;
@@ -36,7 +34,7 @@ public class Principal extends Application{
 		
 		DialogueModal.enregistreFenetrePrincipale(fenetrePrincipale);
 	    
-	    ChargeurDeVue<VuePrincipaleFX> chargeur;
+	    /*ChargeurDeVue<VuePrincipaleFX> chargeur;
 	    chargeur = new ChargeurDeVue<VuePrincipaleFX>("/fxml/principal.xml",
 	                                                  "traductions.chaines",
 	                                                  "/css/principal.css");
@@ -47,7 +45,7 @@ public class Principal extends Application{
 
 	    FabriqueControleur.creerControleur(ControleurPrincipalFX.class, 
 	                                       vue);
-		
+		*/
 		
 		Scene scene = creerScenePrincipale();
 		
