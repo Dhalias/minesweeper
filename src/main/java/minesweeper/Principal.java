@@ -34,7 +34,7 @@ public class Principal extends Application{
 		
 		DialogueModal.enregistreFenetrePrincipale(fenetrePrincipale);
 	    
-	    /*ChargeurDeVue<VuePrincipaleFX> chargeur;
+	    ChargeurDeVue<VuePrincipaleFX> chargeur;
 	    chargeur = new ChargeurDeVue<VuePrincipaleFX>("/fxml/principal.xml",
 	                                                  "traductions.chaines",
 	                                                  "/css/principal.css");
@@ -45,7 +45,7 @@ public class Principal extends Application{
 
 	    FabriqueControleur.creerControleur(ControleurPrincipalFX.class, 
 	                                       vue);
-		*/
+		
 		
 		Scene scene = creerScenePrincipale();
 		
