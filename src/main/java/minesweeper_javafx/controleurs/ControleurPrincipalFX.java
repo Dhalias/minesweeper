@@ -3,14 +3,12 @@ package minesweeper_javafx.controleurs;
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import commun.systeme.Systeme;
-import commun_client.mvc.Afficheur;
 import commun_client.mvc.controleurs.FabriqueControleur;
 import commun_client.mvc.controleurs.RecepteurCommandeMVC;
 import commun_javafx.ChargeurDeVue;
 import commun_javafx.DialogueModal;
 import javafx.scene.Scene;
 import minesweeper.modeles.Parametres.Parametres;
-import minesweeper.modeles.Parametres.ParametresLectureSeule;
 import minesweeper_client.commandes.OuvrirParametres;
 import minesweeper_client.commandes.OuvrirParametresRecue;
 import minesweeper_client.commandes.Quitter;
@@ -33,15 +31,6 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX, 
 	public void installerReceptionCommandes() {
 	    J.appel(this);
 
-	 /*   installerRecepteurCommande(NouvellePartie.class, new RecepteurCommandeMVC<NouvellePartieRecue>() {
-	        @Override
-	        public void executerCommandeMVC(NouvellePartieRecue commande) {
-	            J.appel(this);
-	            
-	           nouvellePartieLocale();
-	        }
-	    });
-	*/
 	    installerRecepteurCommande(OuvrirParametres.class, new RecepteurCommandeMVC<OuvrirParametresRecue>() {
 	        @Override
 	        public void executerCommandeMVC(OuvrirParametresRecue commande) {
@@ -50,7 +39,6 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX, 
 	           ouvrirParametres();
 	        }
 	    });
-	    
 	    
 	    installerRecepteurCommande(Quitter.class, new RecepteurCommandeMVC<QuitterRecue>() {
 	        @Override

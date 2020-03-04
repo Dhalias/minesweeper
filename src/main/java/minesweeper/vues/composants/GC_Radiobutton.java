@@ -5,15 +5,9 @@ package minesweeper.vues.composants;
 
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.Priority;
-
 import javafx.util.Duration;
-
 import javafx.event.*;
-
 import java.util.ArrayList;
-
-import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
-
 import commun.debogage.J;
 import javafx.beans.NamedArg;
 import javafx.event.EventHandler;

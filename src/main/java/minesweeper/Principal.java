@@ -9,12 +9,7 @@ import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import minesweeper.modeles.Parametres.Parametres;
-import minesweeper_javafx.afficheurs.AfficheurParametresFX;
-import minesweeper_javafx.afficheurs.AfficheurPrincipalFX;
-import minesweeper_javafx.controleurs.ControleurParametresFX;
 import minesweeper_javafx.controleurs.ControleurPrincipalFX;
-import minesweeper_javafx.vues.VueParametresFX;
 import minesweeper_javafx.vues.VuePrincipaleFX;
 
 public class Principal extends Application{
@@ -49,7 +44,6 @@ public class Principal extends Application{
 		
 	    Scene scene = chargeur.nouvelleScene((float)25,(float)37.03,(float)1.50);
 		
-	//	Scene scene = creerScenePrincipale();
 		
 		fenetrePrincipale.setScene( scene );
 		
@@ -58,46 +52,6 @@ public class Principal extends Application{
 		
 	}
 	
-/*	private Scene creerScenePrincipale() {
-		J.appel( this );
-		/*
-		ChargeurDeVue<VueParametresFX> chargeur; 
-		chargeur = new ChargeurDeVue<VueParametresFX>("/fxml/parametres.xml","traductions.chaines","/css/parametres.css");
-		
-		VueParametresFX vue = chargeur.getVue();
-		
-		DoitEtre.nonNul( vue );
-		
-		Parametres parametres = new Parametres();
-		
-		AfficheurParametresFX afficheur = new AfficheurParametresFX();
-		
-		FabriqueControleur.creerControleur( ControleurParametresFX.class, parametres, vue, afficheur );
-		
-		Scene scene = chargeur.nouvelleScene((float)25,(float)37.03,(float)1.50);
-		
-		
-		*/
-		/*
-		
-		ChargeurDeVue<VuePrincipaleFX> chargeur; 
-		chargeur = new ChargeurDeVue<VuePrincipaleFX>("/fxml/principal.xml","traductions.chaines","/css/principal.css");
-		
-		VuePrincipaleFX vue = chargeur.getVue();
-		
-		DoitEtre.nonNul( vue );
-				
-		AfficheurPrincipalFX afficheur = new AfficheurPrincipalFX();
-		
-		FabriqueControleur.creerControleur( ControleurParametresFX.class, parametres, vue, afficheur );
-		
-		Scene scene = chargeur.nouvelleScene((float)25,(float)37.03,(float)1.50);
-		
-		DoitEtre.nonNul( scene );
-		
-		return scene;
-	}
-	*/
 	@Override
 	public void stop() {
 		J.appel( this );

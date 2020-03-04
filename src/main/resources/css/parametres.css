@@ -12,6 +12,7 @@
     -fx-background-color:gray;
     -fx-border-style:solid;
     -fx-border-width:0.167em;
+    -fx-alignment : center;
 }
 
 .boutonStart{

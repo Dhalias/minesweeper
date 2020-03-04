@@ -5,10 +5,8 @@ import minesweeper_client.commandes.FaireDebutPartiePourEnvoi;
 import minesweeper_client.vues.VueParametres;
 
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import commun.debogage.DoitEtre;
@@ -18,7 +16,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.*;
 import javafx.scene.layout.*;
-import minesweeper.modeles.Parametres.Parametres;
 import minesweeper.vues.composants.GC_Radiobutton;
 
 public class VueParametresFX implements VueParametres, Initializable {
@@ -43,6 +40,8 @@ public class VueParametresFX implements VueParametres, Initializable {
 
 		DoitEtre.nonNul( gcRadiobuttonDiff );
 		DoitEtre.nonNul( gcRadiobuttonSize );
+		DoitEtre.nonNul( root );
+		DoitEtre.nonNul( boutonDebuter );
 
 	}
 

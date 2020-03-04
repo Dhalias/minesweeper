@@ -37,7 +37,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 
 	@Override
 	public void installerCapteursEvenementsUsager() {
-		
+		J.appel( this );
 		ouvrirParametres.setOnAction( new EventHandler<ActionEvent>() {
 			
 			@Override
