@@ -9,6 +9,23 @@
 <?import javafx.scene.text.Text?>
 <?import minesweeper.vues.composants.GC_Radiobutton?>
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal" fx:id="root" fx:controller="minesweeper_javafx.vues.VuePrincipaleFX">
-    <Button fx:id="boutonStart"></Button>
-    <Button fx:id="quitter"></Button>
+    <VBox styleClass="vide" maxHeight="Infinity" VBox.vgrow="ALWAYS" />
+    <HBox>
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <Text styleClass="texte" text="%principalNomJeu"></Text>
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    
+    <VBox styleClass="vide" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+    <HBox maxHeight="Infinity" VBox.vgrow="ALWAYS">
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+        <VBox styleClass="center" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+            <Button styleClass="bouton" text="%principalParametres" fx:id="ouvrirParametres" maxHeight="Infinity" VBox.vgrow="ALWAYS" />
+            <VBox styleClass="vide" maxHeight="Infinity" VBox.vgrow="ALWAYS"/>
+            <Button styleClass="bouton" text="%principalQuitter" fx:id="quitter" maxHeight="Infinity" VBox.vgrow="ALWAYS" />
+        </VBox>
+        <HBox styleClass="vide" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    
+    <VBox styleClass="vide" maxHeight="Infinity" VBox.vgrow="ALWAYS" />
 </VBox>

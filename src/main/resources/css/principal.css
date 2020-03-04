@@ -1,3 +1,25 @@
 .principal{
-    -fx-background-color:gray;
+    -fx-background-color:silver;
+    -fx-border-color:black;
+    -fx-border-style:solid;
+    -fx-font-family: "Courier New";
+}
+
+.center{
+    -fx-alignment : center;
+}
+
+.bouton{
+    -fx-font-size:1.25em;
+    -fx-border-color:black;
+    -fx-border-style:solid;
+    -fx-text-color: black;
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-border-radius: 20px 20px 20px 20px;
+    -fx-min-width:150px;
+}
+
+.texte{
+    -fx-alignment : center;
+    -fx-font-size:2em;
 }

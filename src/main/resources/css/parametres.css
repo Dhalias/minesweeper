@@ -10,7 +10,6 @@
 
 .paramBox{
     -fx-background-color:gray;
-
     -fx-border-style:solid;
     -fx-border-width:0.167em;
 }
@@ -31,6 +30,7 @@
 .principal{
     -fx-background-color:silver;
     -fx-font-size:1em;
+    -fx-font-family: "Courier New";
 }
 
 .coral{
