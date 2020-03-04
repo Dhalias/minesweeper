@@ -20,7 +20,7 @@ import javafx.scene.control.Button;
 public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	
 	@FXML
-	Button boutonStart;
+	Button ouvrirParametres;
 	
 	@FXML
 	Button quitter;
@@ -38,7 +38,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	@Override
 	public void installerCapteursEvenementsUsager() {
 		
-		boutonStart.setOnAction( new EventHandler<ActionEvent>() {
+		ouvrirParametres.setOnAction( new EventHandler<ActionEvent>() {
 			
 			@Override
 			public void handle( ActionEvent event ) {
@@ -66,7 +66,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	@Override
 	public void initialize( URL arg0, ResourceBundle arg1 ) {
 		J.appel( this );
-		DoitEtre.nonNul( boutonStart );
+		DoitEtre.nonNul( ouvrirParametres );
 		DoitEtre.nonNul( quitter );
 	}
 
