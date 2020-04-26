@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<?import minesweeper.vues.composants.GrilleDuJeu?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal" fx:id="root" fx:controller="minesweeper_javafx.vues.VuePartieLocaleFX">
+    <GrilleDuJeu fx:id="grilleDuJeu" />
+</VBox>

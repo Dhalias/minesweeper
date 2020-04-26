@@ -1,0 +1,51 @@
+
+.titreToggleGroup{
+    -fx-alignment:center;
+    -fx-font-size: 1.15em;
+}
+
+.center{
+    -fx-alignment : center;
+}
+
+.paramBox{
+    -fx-background-color:gray;
+    -fx-border-style:solid;
+    -fx-border-width:0.167em;
+    -fx-alignment : center;
+}
+
+.boutonStart{
+    -fx-font-size:1.25em;
+    -fx-border-color:black;
+    -fx-border-style:solid;
+    -fx-text-color: black;
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-border-radius: 20px 20px 20px 20px;
+}
+
+.boutonStart:pressed{
+    -fx-background-color:orange;
+}
+
+.principal{
+    -fx-background-color:silver;
+    -fx-font-size:1em;
+    -fx-font-family: "Courier New";
+}
+
+.coral{
+    -fx-background-color:coral;
+}
+
+.green{
+    -fx-background-color:green;
+}
+
+.darkRed{
+    -fx-background-color:rgb(172, 66, 83);
+}
+
+.blue{
+    -fx-background-color:rgb(93, 93, 218);
+}
