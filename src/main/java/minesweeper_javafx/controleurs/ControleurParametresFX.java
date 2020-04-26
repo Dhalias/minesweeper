@@ -2,22 +2,19 @@ package minesweeper_javafx.controleurs;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
-import commun.systeme.Systeme;
 import commun_client.mvc.controleurs.FabriqueControleur;
 import commun_client.mvc.controleurs.RecepteurCommandeMVC;
 import commun_javafx.ChargeurDeVue;
 import commun_javafx.DialogueModal;
 import javafx.scene.Scene;
-import minesweeper.modeles.Parametres.Parametres;
+import minesweeper.modeles.PartieLocale.PartieLocale;
 import minesweeper_client.commandes.FaireDebutPartie;
 import minesweeper_client.commandes.FaireDebutPartieRecue;
-import minesweeper_client.commandes.OuvrirParametres;
-import minesweeper_client.commandes.OuvrirParametresRecue;
-import minesweeper_client.commandes.Quitter;
-import minesweeper_client.commandes.QuitterRecue;
 import minesweeper_client.controleurs.ControleurParametres;
 import minesweeper_javafx.afficheurs.AfficheurParametresFX;
+import minesweeper_javafx.afficheurs.AfficheurPartieLocaleFX;
 import minesweeper_javafx.vues.VueParametresFX;
+import minesweeper_javafx.vues.VuePartieLocaleFX;
 
 public class ControleurParametresFX extends ControleurParametres<VueParametresFX, AfficheurParametresFX> {
 
