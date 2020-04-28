@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import minesweeper.vues.composants.GrilleDuJeu?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="principal" fx:id="root" fx:controller="minesweeper_javafx.vues.VuePartieLocaleFX">
+    <HBox styleClass="center"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
+        <HBox maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Text text="%principalNomJeu" styleClass="titre"/>
+        <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <HBox styleClass="center"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
+        <HBox maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <GrilleDuJeu fx:id="grilleDuJeu"/>
+        <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>
