@@ -1,6 +1,7 @@
 package minesweeper_javafx.afficheurs;
 
 import commun.debogage.J;
+import minesweeper.modeles.PartieLocale.PartieLocale;
 import minesweeper.modeles.PartieLocale.PartieLocaleLectureSeule;
 import minesweeper_client.afficheurs.AfficheurPartieLocale;
 import minesweeper_javafx.vues.VuePartieLocaleFX;

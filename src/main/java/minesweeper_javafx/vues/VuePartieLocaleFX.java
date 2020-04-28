@@ -14,6 +14,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.*;
 import javafx.scene.control.Button;
+import minesweeper.modeles.PartieLocale.PartieLocale;
 import minesweeper.vues.composants.GrilleDuJeu;
 
 public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
@@ -22,7 +23,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	private GrilleDuJeu grilleDuJeu;
 	
 	private JouerCoupPartieLocalePourEnvoi jouerCoupPartieLocalePourEnvoi;
-	
+		
 	@Override
 	public void obtenirCommandesPourEnvoi() {
 		J.appel( this );
@@ -55,6 +56,6 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		J.appel( this );
 		
 	}
-	
+		
 	
 }

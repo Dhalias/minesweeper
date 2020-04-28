@@ -17,13 +17,12 @@ public class GrilleDuJeu extends VBox{
 	public GrilleDuJeu () {
 		super();
 		J.appel( this );
-		final int TAILLECARTE = 18;
+		final int TAILLECARTE = 30;
 		
 		
 		this.tableauBouton = creerTableauBouton(TAILLECARTE);
 		GridPane grilleDuJeu = creerGrilleBouton(this.tableauBouton);
 				
-		this.getChildren().add( new Text("Test") );
 		this.getChildren().add( grilleDuJeu );
 	}
 	
