@@ -102,4 +102,10 @@ public class VueParametresFX implements VueParametres, Initializable {
 
 	}
 
+	@Override
+	public void verifierCommandesPossibles() {
+		J.appel(this);
+		
+	}
+
 }

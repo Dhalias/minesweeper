@@ -1,6 +1,7 @@
 package minesweeper_javafx.vues;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import commun.debogage.J;
@@ -27,7 +28,8 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void obtenirCommandesPourEnvoi() {
 		J.appel( this );
-		
+
+		jouerCoupPartieLocalePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(JouerCoupPartieLocale.class);
 	}
 
 	@Override
@@ -40,7 +42,6 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 				@Override
 				public void handle( Event event) {
 					J.appel( this );
-					jouerCoupPartieLocalePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(JouerCoupPartieLocale.class);
 					Button bouttonSource = (Button) event.getSource();
 					jouerCoupPartieLocalePourEnvoi.setIdCase( Integer.parseInt( bouttonSource.getId() ));
 					jouerCoupPartieLocalePourEnvoi.envoyerCommande();
@@ -54,6 +55,20 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void initialize( URL location, ResourceBundle resources ) {
 		J.appel( this );
+		
+	}
+
+	@Override
+	public void verifierCommandesPossibles() {
+		J.appel(this);
+		
+	}
+
+	@Override
+	public void afficherBoutons(List<Integer> boutons) {
+		J.appel(this);
+		
+		grilleDuJeu.afficherBoutons(boutons);
 		
 	}
 		
