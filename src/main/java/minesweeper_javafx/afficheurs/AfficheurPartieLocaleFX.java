@@ -11,6 +11,7 @@ public class AfficheurPartieLocaleFX extends AfficheurPartieLocale<VuePartieLoca
 	public void initialiserAffichage( PartieLocaleLectureSeule modeleLectureSeule, VuePartieLocaleFX vue ) {
 		J.appel( this );
 		
+		
 	}
 
 	@Override
