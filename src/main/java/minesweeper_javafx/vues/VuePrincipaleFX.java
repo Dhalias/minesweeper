@@ -70,4 +70,10 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 		DoitEtre.nonNul( quitter );
 	}
 
+	@Override
+	public void verifierCommandesPossibles() {
+		J.appel(this);
+		
+	}
+
 }

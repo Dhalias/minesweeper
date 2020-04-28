@@ -13,11 +13,16 @@ public class AfficheurPartieLocaleFX extends AfficheurPartieLocale<VuePartieLoca
 		J.appel( this );
 		
 		
+		
 	}
 
 	@Override
 	public void rafraichirAffichage( PartieLocaleLectureSeule modeleLectureSeule, VuePartieLocaleFX vue ) {
 		J.appel( this );
+
+
+		vue.afficherBoutons(modeleLectureSeule.getBoutonsUtilise());
+		
 		
 	}
 

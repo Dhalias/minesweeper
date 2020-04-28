@@ -23,7 +23,7 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 				J.appel( this );
 				System.out.println( "Id de la commande = "+commande.getIdCase() );
 				
-				
+				modele.ajouterBouton(commande.getIdCase());
 			}
 	    });
 		

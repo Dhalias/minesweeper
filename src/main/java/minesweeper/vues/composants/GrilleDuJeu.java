@@ -1,6 +1,7 @@
 package minesweeper.vues.composants;
 
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 import commun.debogage.J;
 import javafx.scene.layout.VBox;
@@ -12,7 +13,10 @@ import javafx.scene.control.Button;
 
 public class GrilleDuJeu extends VBox{
 	
+	// TODO?: stoquer dans un tableau 2D
+	//        et utiliser indiceColone, indiceRangee comme id?
 	private Button[] tableauBouton;
+
 
 	public GrilleDuJeu () {
 		super();
@@ -67,6 +71,15 @@ public class GrilleDuJeu extends VBox{
 		
 		return tableauBouton;
 		
+	}
+
+	public void afficherBoutons(List<Integer> boutons) {
+		J.appel(this);
+		
+		for(int idBouton : boutons) {
+			
+			tableauBouton[idBouton].setVisible(false);
+		}
 	}
 	
 }
