@@ -7,15 +7,16 @@ import javafx.scene.control.Button;
 
 public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements PartieLocaleLectureSeule{
 
-	ArrayList<Integer> listeBouton = new ArrayList<>();
+	ArrayList<int[]> listeBouton = new ArrayList<>();
 	
 	@Override
-	public ArrayList<Integer> getBoutonsUtilise() {
+	public ArrayList<int[]> getBoutonsUtilise() {
 		return this.listeBouton;
 	}
 	
-	public void ajouterBouton(int idBtn) {
-		this.getBoutonsUtilise().add( idBtn );
+	public void ajouterBouton(int indexColonne, int indexLigne) {
+		int[] emplacement = {indexColonne,indexLigne};
+		this.getBoutonsUtilise().add( emplacement );
 	}
 
 }

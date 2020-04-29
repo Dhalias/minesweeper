@@ -22,8 +22,10 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 			public void executerCommandeMVC( JouerCoupPartieLocaleRecue commande ) {
 				J.appel( this );
 				System.out.println( "Id de la commande = "+commande.getIdCase() );
-				
-				modele.ajouterBouton(commande.getIdCase());
+				int indexColonne = Character.getNumericValue( commande.getIdCase().charAt( 0 ) );
+				int indexLigne = Character.getNumericValue(commande.getIdCase().charAt( 2 ));
+				System.out.println( "\n\nindexColonne = "+indexColonne+"\nindexLigne"+indexLigne );
+				modele.ajouterBouton(indexColonne,indexLigne);
 			}
 	    });
 		

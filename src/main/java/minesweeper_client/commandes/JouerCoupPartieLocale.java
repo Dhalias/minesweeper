@@ -5,15 +5,15 @@ import commun_client.commandes.Commande;
 public class JouerCoupPartieLocale extends Commande<JouerCoupPartieLocalePourEnvoi, JouerCoupPartieLocaleRecue>
 implements JouerCoupPartieLocalePourEnvoi, JouerCoupPartieLocaleRecue  {
 
-	private int idCase;
+	private String idCase;
 	
 	@Override
-	public int getIdCase() {
+	public String getIdCase() {
 		return this.idCase;
 	}
 
 	@Override
-	public void setIdCase( int id ) {
+	public void setIdCase( String id ) {
 		this.idCase = id;
 		
 	}
