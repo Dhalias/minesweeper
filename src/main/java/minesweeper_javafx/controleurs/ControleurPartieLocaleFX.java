@@ -6,6 +6,8 @@ import minesweeper_client.commandes.FaireDebutPartie;
 import minesweeper_client.commandes.FaireDebutPartieRecue;
 import minesweeper_client.commandes.JouerCoupPartieLocale;
 import minesweeper_client.commandes.JouerCoupPartieLocaleRecue;
+import minesweeper_client.commandes.QuitterFinPartie;
+import minesweeper_client.commandes.QuitterFinPartieRecue;
 import minesweeper_client.controleurs.ControleurPartieLocale;
 import minesweeper_javafx.afficheurs.AfficheurPartieLocaleFX;
 import minesweeper_javafx.vues.VuePartieLocaleFX;
@@ -29,6 +31,16 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 					}
 				} );
 
+		installerRecepteurCommande( QuitterFinPartie.class, new RecepteurCommandeMVC<QuitterFinPartieRecue>() {
+
+			@Override
+			public void executerCommandeMVC( QuitterFinPartieRecue commande ) {
+				System.out.println( "Quitter la partie." );
+				System.exit( 0 );
+				
+			}
+		} );
+
 	}
 
 	@Override
@@ -48,9 +60,9 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 		return tableauJeu;
 
 	}
-	
-	//TODO : Ajouter de l'aléatoire dans la disposition des bombes.
-	
+
+	// TODO : Ajouter de l'aléatoire dans la disposition des bombes.
+
 	private void ajouterBombes( int[][] tableauJeu ) {
 
 		tableauJeu[0][0] = 9;
@@ -58,7 +70,6 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 		tableauJeu[1][2] = 9;
 		tableauJeu[3][1] = 9;
 		tableauJeu[4][4] = 9;
-		
 
 	}
 
@@ -99,10 +110,8 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 		} catch ( Exception indexOutOfBoundException ) {
 			isOutOfBound = true;
 		}
-		
+
 		return isOutOfBound;
 	}
-
-	
 
 }
