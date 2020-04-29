@@ -17,4 +17,10 @@
         <GrilleDuJeu fx:id="grilleDuJeu"/>
         <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS" />
     </HBox>
+
+    <HBox styleClass="center"  maxHeight="Infinity" VBox.vgrow="ALWAYS">
+        <HBox maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Text text="%finJeu" fx:id="finJeu" styleClass="titre"/>
+        <HBox  maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+    </HBox>
 </VBox>

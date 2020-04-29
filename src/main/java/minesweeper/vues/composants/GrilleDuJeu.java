@@ -65,8 +65,9 @@ public class GrilleDuJeu extends VBox{
 		
 	}
 
-	public void afficherBoutons(List<int[]> boutons,int[][] tableauJeu) {
+	public boolean afficherBoutons(List<int[]> boutons,int[][] tableauJeu) {
 		J.appel(this);
+		boolean finJeu = false;
 		
 		for(int[] idBouton : boutons) {
 			int indexColonne = idBouton[0];
@@ -74,8 +75,11 @@ public class GrilleDuJeu extends VBox{
 			tableauBouton[indexColonne][indexLigne].setText( Integer.toString(tableauJeu[indexColonne][indexLigne] ));
 			if ( tableauJeu[indexColonne][indexLigne] == 9 ) {
 				finDuJeu(tableauJeu);
+				finJeu = true;
 			}
 		}
+		
+		return finJeu;
 	}
 
 	private void finDuJeu(int[][] tableauJeu) {

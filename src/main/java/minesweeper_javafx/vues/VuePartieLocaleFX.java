@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.*;
+import javafx.scene.text.*;
 import javafx.scene.control.Button;
 import minesweeper.modeles.PartieLocale.PartieLocale;
 import minesweeper.vues.composants.GrilleDuJeu;
@@ -22,6 +23,9 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
 	@FXML
 	private GrilleDuJeu grilleDuJeu;
+	
+	@FXML
+	private Text finJeu;
 
 	private JouerCoupPartieLocalePourEnvoi jouerCoupPartieLocalePourEnvoi;
 
@@ -58,6 +62,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void initialize( URL location, ResourceBundle resources ) {
 		J.appel( this );
+		finJeu.setVisible(false);
 
 	}
 
@@ -71,7 +76,11 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	public void afficherBoutons( List<int[]> boutons, int[][] tableauJeu ) {
 		J.appel( this );
 
-		grilleDuJeu.afficherBoutons( boutons, tableauJeu );
+		boolean finDuJeu = grilleDuJeu.afficherBoutons( boutons, tableauJeu );
+		
+		if ( finDuJeu ) {
+			finJeu.setVisible( true );
+		}
 
 	}
 
