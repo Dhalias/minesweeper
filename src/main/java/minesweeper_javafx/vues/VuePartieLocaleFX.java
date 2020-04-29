@@ -9,6 +9,8 @@ import commun_client.commandes.FabriqueCommande;
 import minesweeper_client.commandes.FaireDebutPartie;
 import minesweeper_client.commandes.JouerCoupPartieLocale;
 import minesweeper_client.commandes.JouerCoupPartieLocalePourEnvoi;
+import minesweeper_client.commandes.QuitterFinPartie;
+import minesweeper_client.commandes.QuitterFinPartiePourEnvoi;
 import minesweeper_client.vues.VuePartieLocale;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -26,14 +28,20 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	
 	@FXML
 	private Text finJeu;
+	
+	@FXML
+	private Button btnRetour;
 
 	private JouerCoupPartieLocalePourEnvoi jouerCoupPartieLocalePourEnvoi;
+	
+	private QuitterFinPartiePourEnvoi quitterFinPartiePourEnvoi;
 
 	@Override
 	public void obtenirCommandesPourEnvoi() {
 		J.appel( this );
 
 		jouerCoupPartieLocalePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( JouerCoupPartieLocale.class );
+		quitterFinPartiePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( QuitterFinPartie.class );
 	}
 
 	@Override
@@ -57,12 +65,22 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
 		}
 
+		btnRetour.setOnMouseClicked( new EventHandler<Event>() {
+
+			@Override
+			public void handle( Event event ) {
+				quitterFinPartiePourEnvoi.envoyerCommande();
+				
+			}
+		
+		});
 	}
 
 	@Override
 	public void initialize( URL location, ResourceBundle resources ) {
 		J.appel( this );
 		finJeu.setVisible(false);
+		btnRetour.setVisible( false );
 
 	}
 
@@ -80,6 +98,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		
 		if ( finDuJeu ) {
 			finJeu.setVisible( true );
+			btnRetour.setVisible( true );
 		}
 
 	}
