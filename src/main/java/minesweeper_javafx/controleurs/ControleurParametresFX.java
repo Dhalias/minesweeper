@@ -8,6 +8,8 @@ import commun_javafx.ChargeurDeVue;
 import commun_javafx.DialogueModal;
 import javafx.scene.Scene;
 import minesweeper.modeles.PartieLocale.PartieLocale;
+import minesweeper_client.commandes.ChangerCouleurAP;
+import minesweeper_client.commandes.ChangerCouleurAPRecue;
 import minesweeper_client.commandes.FaireDebutPartie;
 import minesweeper_client.commandes.FaireDebutPartieRecue;
 import minesweeper_client.controleurs.ControleurParametres;
@@ -34,6 +36,15 @@ public class ControleurParametresFX extends ControleurParametres<VueParametresFX
 			public void executerCommandeMVC( FaireDebutPartieRecue commande ) {
 				J.appel( this );
 				ouvrirPartie();
+			}
+	    });
+	    
+	    installerRecepteurCommande(ChangerCouleurAP.class, new RecepteurCommandeMVC<ChangerCouleurAPRecue>() {
+
+			@Override
+			public void executerCommandeMVC( ChangerCouleurAPRecue commande ) {
+				J.appel( this );
+				System.out.println( "Changement de couleur. Lors du rafraîchissement" );
 			}
 	    });
 	      

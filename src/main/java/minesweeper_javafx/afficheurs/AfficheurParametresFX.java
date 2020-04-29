@@ -25,6 +25,7 @@ public class AfficheurParametresFX extends AfficheurParametres<VueParametresFX>{
 		System.out.println( "\n [INFORMATIONS]\tLa taille de la carte est de "+modeleLectureSeule.getTaille()+"\n");
 		System.out.println( "\n [INFORMATIONS]\tLa difficulte  est de "+modeleLectureSeule.getDifficulte()+"\n");
 		
+		vue.changerCouleurArrierrePlan();
 		
 	}
 

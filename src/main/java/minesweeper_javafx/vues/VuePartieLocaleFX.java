@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import commun_client.commandes.FabriqueCommande;
 import minesweeper_client.commandes.FaireDebutPartie;
@@ -69,6 +70,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
 			@Override
 			public void handle( Event event ) {
+				J.appel( this );
 				quitterFinPartiePourEnvoi.envoyerCommande();
 				
 			}
@@ -79,6 +81,9 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void initialize( URL location, ResourceBundle resources ) {
 		J.appel( this );
+		DoitEtre.nonNul( btnRetour );
+		DoitEtre.nonNul( finJeu );
+		DoitEtre.nonNul( grilleDuJeu );
 		finJeu.setVisible(false);
 		btnRetour.setVisible( false );
 

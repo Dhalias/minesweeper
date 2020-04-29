@@ -45,7 +45,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX, 
 	        public void executerCommandeMVC(QuitterRecue commande) {
 	            J.appel(this);
 	            
-	           Systeme.quitter();
+	            System.exit(0);
 	        }
 	    });
 	    

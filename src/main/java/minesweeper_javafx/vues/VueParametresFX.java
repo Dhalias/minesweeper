@@ -1,10 +1,13 @@
 package minesweeper_javafx.vues;
 
+import minesweeper_client.commandes.ChangerCouleurAP;
+import minesweeper_client.commandes.ChangerCouleurAPPourEnvoi;
 import minesweeper_client.commandes.FaireDebutPartie;
 import minesweeper_client.commandes.FaireDebutPartiePourEnvoi;
 import minesweeper_client.vues.VueParametres;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,8 +34,9 @@ public class VueParametresFX implements VueParametres, Initializable {
 
 	@FXML
 	private Button boutonDebuter;
-	
+
 	private FaireDebutPartiePourEnvoi faireDebutPartiePourEnvoi;
+	private ChangerCouleurAPPourEnvoi changerCouleurPourEnvoi;
 
 	@Override
 	public void initialize( URL arg0, ResourceBundle arg1 ) {
@@ -47,7 +51,7 @@ public class VueParametresFX implements VueParametres, Initializable {
 
 	public void changerCouleurArrierrePlan() {
 		J.appel( this );
-		root.getStyleClass().add( calculerCouleur() );
+		root.setStyle( calculerCouleur() );
 	}
 
 	private String calculerCouleur() {
@@ -55,18 +59,18 @@ public class VueParametresFX implements VueParametres, Initializable {
 		String couleur = "grey";
 		switch ( (int) ( Math.random() * 4 ) ) {
 		case 0:
-			couleur = "coral";
+			couleur = "-fx-background-color:coral;";
 			break;
 		case 1:
-			couleur = "green";
+			couleur = "-fx-background-color:green;";
 			break;
 
 		case 2:
-			couleur = "darkRed";
+			couleur = "-fx-background-color:rgb(172, 66, 83);";
 			break;
 
 		case 3:
-			couleur = "blue";
+			couleur = "-fx-background-color:rgb(93, 93, 218);";
 			break;
 		}
 		return couleur;
@@ -75,13 +79,10 @@ public class VueParametresFX implements VueParametres, Initializable {
 	@Override
 	public void obtenirCommandesPourEnvoi() {
 		J.appel( this );
+		faireDebutPartiePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( FaireDebutPartie.class );
+		changerCouleurPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( ChangerCouleurAP.class );
 
 	}
-
-	public void obtenirFaireDebutPartiePourEnvoi() {
-		J.appel( this );
-	}
-	
 
 	@Override
 	public void installerCapteursEvenementsUsager() {
@@ -91,21 +92,48 @@ public class VueParametresFX implements VueParametres, Initializable {
 			@Override
 			public void handle( ActionEvent event ) {
 				J.appel( this );
-				faireDebutPartiePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( FaireDebutPartie.class );
 				faireDebutPartiePourEnvoi.setDifficulte( gcRadiobuttonDiff.getSelectedValue() );
 				faireDebutPartiePourEnvoi.setTaille( gcRadiobuttonSize.getSelectedValue() );
 				faireDebutPartiePourEnvoi.envoyerCommande();
-			
+
 			}
 
 		} );
+
+		for ( RadioButton rb : gcRadiobuttonSize.getRbList() ) {
+
+			rb.setOnAction( new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle( ActionEvent event ) {
+					J.appel( this );
+					changerCouleurPourEnvoi.envoyerCommande();
+
+				}
+
+			} );
+		}
+
+		for ( RadioButton rb : gcRadiobuttonDiff.getRbList() ) {
+
+			rb.setOnAction( new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle( ActionEvent event ) {
+					J.appel( this );
+					changerCouleurPourEnvoi.envoyerCommande();
+
+				}
+
+			} );
+		}
 
 	}
 
 	@Override
 	public void verifierCommandesPossibles() {
-		J.appel(this);
-		
+		J.appel( this );
+
 	}
 
 }

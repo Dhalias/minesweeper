@@ -10,7 +10,6 @@ import javafx.event.*;
 import java.util.ArrayList;
 import commun.debogage.J;
 import javafx.beans.NamedArg;
-import javafx.event.EventHandler;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
@@ -41,6 +40,7 @@ public class GC_Radiobutton extends VBox {
 		animationSurvol.setCycleCount( -1 );
 
 		installerListeners();
+		
 
 	}
 
@@ -63,7 +63,6 @@ public class GC_Radiobutton extends VBox {
 				GC_Radiobutton.this.setOpacity( 1 );
 			}
 		} );
-
 	}
 
 	private void creerAnimation() {
