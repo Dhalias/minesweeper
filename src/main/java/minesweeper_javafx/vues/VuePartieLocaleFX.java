@@ -26,15 +26,15 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
 	@FXML
 	private GrilleDuJeu grilleDuJeu;
-	
+
 	@FXML
 	private Text finJeu;
-	
+
 	@FXML
 	private Button btnRetour;
 
 	private JouerCoupPartieLocalePourEnvoi jouerCoupPartieLocalePourEnvoi;
-	
+
 	private QuitterFinPartiePourEnvoi quitterFinPartiePourEnvoi;
 
 	@Override
@@ -72,10 +72,10 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 			public void handle( Event event ) {
 				J.appel( this );
 				quitterFinPartiePourEnvoi.envoyerCommande();
-				
+
 			}
-		
-		});
+
+		} );
 	}
 
 	@Override
@@ -84,7 +84,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		DoitEtre.nonNul( btnRetour );
 		DoitEtre.nonNul( finJeu );
 		DoitEtre.nonNul( grilleDuJeu );
-		finJeu.setVisible(false);
+		finJeu.setVisible( false );
 		btnRetour.setVisible( false );
 
 	}
@@ -100,7 +100,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		J.appel( this );
 
 		boolean finDuJeu = grilleDuJeu.afficherBoutons( boutons, tableauJeu );
-		
+
 		if ( finDuJeu ) {
 			finJeu.setVisible( true );
 			btnRetour.setVisible( true );

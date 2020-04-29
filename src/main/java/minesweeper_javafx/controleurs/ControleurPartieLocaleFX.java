@@ -35,9 +35,10 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 
 			@Override
 			public void executerCommandeMVC( QuitterFinPartieRecue commande ) {
+				J.appel( this );
 				System.out.println( "Quitter la partie." );
 				System.exit( 0 );
-				
+
 			}
 		} );
 
@@ -52,6 +53,7 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 	}
 
 	private int[][] creerTableauJeu() {
+		J.appel( this );
 		int[][] tableauJeu = new int[6][30 / 6];
 
 		ajouterBombes( tableauJeu );
@@ -61,10 +63,8 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 
 	}
 
-	// TODO : Ajouter de l'aléatoire dans la disposition des bombes.
-
 	private void ajouterBombes( int[][] tableauJeu ) {
-
+		J.appel( this );
 		tableauJeu[0][0] = 9;
 		tableauJeu[5][3] = 9;
 		tableauJeu[1][2] = 9;
@@ -74,6 +74,7 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 	}
 
 	private void remplirChiffres( int[][] tableauJeu ) {
+		J.appel( this );
 		for ( int i = 0; i < tableauJeu.length; i++ ) {
 			for ( int j = 0; j < tableauJeu[i].length; j++ ) {
 				if ( tableauJeu[i][j] != 9 ) {
@@ -85,7 +86,7 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 	}
 
 	private int calculerBombesProche( int[][] tableauJeu, int indexColonne, int indexLigne ) {
-
+		J.appel( this );
 		int nbBombes = 0;
 		for ( int i = -1; i < 2; i++ ) {
 			for ( int j = -1; j < 2; j++ ) {
@@ -104,6 +105,7 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 	}
 
 	private boolean isOutOfBound( int[][] tableauJeu, int indexColonne, int indexLigne ) {
+		J.appel( this );
 		boolean isOutOfBound = false;
 		try {
 			int val = tableauJeu[indexColonne][indexLigne];

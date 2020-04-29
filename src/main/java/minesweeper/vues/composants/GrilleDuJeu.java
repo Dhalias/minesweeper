@@ -29,6 +29,7 @@ public class GrilleDuJeu extends VBox{
 	}
 	
 	public Button[][] getTableauBouton() {
+		J.appel( this );
 		return this.tableauBouton;
 	}
 	
@@ -83,6 +84,7 @@ public class GrilleDuJeu extends VBox{
 	}
 
 	private void finDuJeu(int[][] tableauJeu) {
+		J.appel( this );
 		for ( int i = 0; i < tableauBouton.length; i++ ) {
 			for ( int j = 0; j < tableauBouton[i].length; j++ ) {
 				if(tableauJeu[i][j] == 9) {

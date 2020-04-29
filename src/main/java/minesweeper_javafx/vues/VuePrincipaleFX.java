@@ -3,6 +3,7 @@ package minesweeper_javafx.vues;
 
 import minesweeper_client.commandes.OuvrirParametres;
 import minesweeper_client.commandes.OuvrirParametresPourEnvoi;
+import minesweeper_client.commandes.Quitter;
 import minesweeper_client.commandes.QuitterPourEnvoi;
 import minesweeper_client.vues.VuePrincipale;
 
@@ -32,6 +33,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	public void obtenirCommandesPourEnvoi() {
 		J.appel( this );
 		ouvrirParametresPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( OuvrirParametres.class );
+		quitterPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi( Quitter.class );
 		
 	}
 
