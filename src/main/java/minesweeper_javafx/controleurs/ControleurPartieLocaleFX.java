@@ -45,14 +45,20 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 		ajouterBombes( tableauJeu );
 		remplirChiffres( tableauJeu );
 
-		for ( int i = 0; i < tableauJeu.length; i++ ) {
-			System.out.println();
-			for ( int j = 0; j < tableauJeu[i].length; j++ ) {
-				System.out.println( tableauJeu[i][j] + " " );
-			}
-		}
-
 		return tableauJeu;
+
+	}
+	
+	//TODO : Ajouter de l'aléatoire dans la disposition des bombes.
+	
+	private void ajouterBombes( int[][] tableauJeu ) {
+
+		tableauJeu[0][0] = 9;
+		tableauJeu[5][3] = 9;
+		tableauJeu[1][2] = 9;
+		tableauJeu[3][1] = 9;
+		tableauJeu[4][4] = 9;
+		
 
 	}
 
@@ -97,12 +103,6 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 		return isOutOfBound;
 	}
 
-	private void ajouterBombes( int[][] tableauJeu ) {
-
-		tableauJeu[0][0] = 9;
-		tableauJeu[1][0] = 9;
-		tableauJeu[2][0] = 9;
-
-	}
+	
 
 }

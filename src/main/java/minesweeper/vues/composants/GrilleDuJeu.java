@@ -72,7 +72,25 @@ public class GrilleDuJeu extends VBox{
 			int indexColonne = idBouton[0];
 			int indexLigne = idBouton[1];
 			tableauBouton[indexColonne][indexLigne].setText( Integer.toString(tableauJeu[indexColonne][indexLigne] ));
+			if ( tableauJeu[indexColonne][indexLigne] == 9 ) {
+				finDuJeu(tableauJeu);
+			}
 		}
+	}
+
+	private void finDuJeu(int[][] tableauJeu) {
+		for ( int i = 0; i < tableauBouton.length; i++ ) {
+			for ( int j = 0; j < tableauBouton[i].length; j++ ) {
+				if(tableauJeu[i][j] == 9) {
+					tableauBouton[i][j].setText( "X" );
+				}else {
+					tableauBouton[i][j].setText( Integer.toString(tableauJeu[i][j] ));
+				}
+				
+			}
+			
+		}
+		
 	}
 	
 }
