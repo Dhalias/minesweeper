@@ -7,4 +7,5 @@ import javafx.scene.control.Button;
 
 public interface PartieLocaleLectureSeule extends ModeleLectureSeule{
 	ArrayList<int[]> getBoutonsUtilise();
+	int[][] getTableauJeu();
 }

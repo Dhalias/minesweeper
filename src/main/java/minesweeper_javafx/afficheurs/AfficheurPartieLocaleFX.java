@@ -21,7 +21,7 @@ public class AfficheurPartieLocaleFX extends AfficheurPartieLocale<VuePartieLoca
 		J.appel( this );
 
 
-		vue.afficherBoutons(modeleLectureSeule.getBoutonsUtilise());
+		vue.afficherBoutons(modeleLectureSeule.getBoutonsUtilise(),modeleLectureSeule.getTableauJeu());
 		
 		
 	}

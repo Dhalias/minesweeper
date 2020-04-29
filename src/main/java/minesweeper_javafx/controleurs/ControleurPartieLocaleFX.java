@@ -34,6 +34,55 @@ public class ControleurPartieLocaleFX extends ControleurPartieLocale<VuePartieLo
 	protected void demarrer() {
 		J.appel( this );
 		
+		int[][] tableauJeu = creerTableauJeu();
+		modele.setTableauJeu(tableauJeu);
+	}
+
+	private int[][] creerTableauJeu() {
+		int[][] tableauJeu = new int[6][30/6];
+		
+		ajouterBombes(tableauJeu);
+		remplirChiffres(tableauJeu);
+		
+		for ( int i = 0; i < tableauJeu.length; i++ ) {
+			System.out.println(  );
+			for ( int j = 0; j < tableauJeu[i].length; j++ ) {
+				System.out.println( tableauJeu[i][j] + " " );
+			}
+		}
+		
+		return tableauJeu;
+		
+	}
+
+	private void remplirChiffres( int[][] tableauJeu ) {
+		for ( int i = 0; i < tableauJeu.length; i++ ) {
+			for ( int j = 0; j < tableauJeu[i].length; j++ ) {
+				if ( tableauJeu[i][j] != 9 ) {
+					tableauJeu[i][j] = 1;
+				}
+				//calculerBombesProche(tableauJeu,i,j);
+			}
+		}
+		
+	}
+
+	private void calculerBombesProche( int[][] tableauJeu,int indexColonne, int indexLigne ) {
+		if(tableauJeu[indexColonne][indexLigne] != 9) {
+			int nbBombes = 0;
+			if ( indexLigne != 0 ) {
+				
+			}
+		}
+		
+	}
+
+	private void ajouterBombes( int[][] tableauJeu ) {
+
+		tableauJeu[0][0] = 9;
+		tableauJeu[1][0] = 9;
+		tableauJeu[2][0] = 9;
+		
 	}
 
 }

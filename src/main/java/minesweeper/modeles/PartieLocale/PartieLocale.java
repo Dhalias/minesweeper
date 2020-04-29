@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements PartieLocaleLectureSeule{
 
 	ArrayList<int[]> listeBouton = new ArrayList<>();
+	int[][] tableauJeu;
 	
 	@Override
 	public ArrayList<int[]> getBoutonsUtilise() {
@@ -17,6 +18,14 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	public void ajouterBouton(int indexColonne, int indexLigne) {
 		int[] emplacement = {indexColonne,indexLigne};
 		this.getBoutonsUtilise().add( emplacement );
+	}
+	
+	public void setTableauJeu(int[][] tableauJeu) {
+		this.tableauJeu = tableauJeu;
+	}
+	
+	public int[][] getTableauJeu() {
+		return this.tableauJeu;
 	}
 
 }

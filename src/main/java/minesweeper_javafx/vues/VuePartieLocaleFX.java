@@ -68,10 +68,10 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	}
 
 	@Override
-	public void afficherBoutons( List<int[]> boutons ) {
+	public void afficherBoutons( List<int[]> boutons, int[][] tableauJeu ) {
 		J.appel( this );
 
-		grilleDuJeu.afficherBoutons( boutons );
+		grilleDuJeu.afficherBoutons( boutons, tableauJeu );
 
 	}
 

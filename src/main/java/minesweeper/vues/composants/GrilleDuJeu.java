@@ -13,8 +13,6 @@ import javafx.scene.control.Button;
 
 public class GrilleDuJeu extends VBox{
 	
-	// TODO?: stoquer dans un tableau 2D
-	//        et utiliser indiceColone, indiceRangee comme id?
 	private Button[][] tableauBouton;
 
 
@@ -67,13 +65,13 @@ public class GrilleDuJeu extends VBox{
 		
 	}
 
-	public void afficherBoutons(List<int[]> boutons) {
+	public void afficherBoutons(List<int[]> boutons,int[][] tableauJeu) {
 		J.appel(this);
 		
 		for(int[] idBouton : boutons) {
 			int indexColonne = idBouton[0];
 			int indexLigne = idBouton[1];
-			tableauBouton[indexColonne][indexLigne].setText( "X" );;
+			tableauBouton[indexColonne][indexLigne].setText( Integer.toString(tableauJeu[indexColonne][indexLigne] ));
 		}
 	}
 	
