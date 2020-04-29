@@ -38,13 +38,10 @@ public class GrilleDuJeu extends VBox{
 	private GridPane creerGrilleBouton( Button[][] tableauBouton ) {
 		J.appel( this );
 		GridPane grilleDuJeu = new GridPane();
-		int indexColonne = 0;
-		int indexLigne = 0;
 		
 		for ( int i = 0; i < tableauBouton.length; i++ ) {
 			for ( int j = 0; j < tableauBouton[i].length; j++ ) {
 				grilleDuJeu.add( tableauBouton[i][j], i, j );
-				System.out.println( "IndexColonne = "+indexColonne + "\nIndexLigne = "+indexLigne );
 			}
 		}
 		
@@ -58,7 +55,7 @@ public class GrilleDuJeu extends VBox{
 		
 		for ( int i = 0; i < tableauBouton.length; i++ ) {
 			for ( int j = 0; j < tableauBouton[i].length; j++ ) {
-				Button button = new Button("X");
+				Button button = new Button(" ");
 				button.setId( i+"-"+j );			
 				tableauBouton[i][j] = button;
 				System.out.println( tableauBouton.length );
@@ -76,7 +73,7 @@ public class GrilleDuJeu extends VBox{
 		for(int[] idBouton : boutons) {
 			int indexColonne = idBouton[0];
 			int indexLigne = idBouton[1];
-			tableauBouton[indexColonne][indexLigne].setVisible(false);
+			tableauBouton[indexColonne][indexLigne].setText( "X" );;
 		}
 	}
 	
