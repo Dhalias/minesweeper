@@ -21,8 +21,5 @@ Correction:
     	* l'action modifie le modèle
     	* l'affichage est rafraîchit
 
- 40/40) MVC *Partie locale* 
-	* vous **devez** utiliser les classes MVC du prof
-    * au moins une action usager:
-    	* l'action modifie le modèle
-    	* l'affichage est rafraîchit
+ 43/40) MVC *Partie locale* 
+ 	* Super, mais les règles devraient être dans le modèle.
